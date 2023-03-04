@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='CSS/style.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="content">
+    <div class="text">Project Manager</div>
+    <form action="{{url_for('login')}}" method="POST">
+      <div class="field">
+        <span class="fa fa-user"></span>
+        <input name="uname" type="text" placeholder="user name" required>
+      </div>
+      <div class="field">
+        <span class="fa fa-lock"></span>
+        <input name="password" type="password" placeholder="password">
+      </div>
+
+      <button>Log in</button>
+    </form>
+  </div>
+</body>
+
+</html>
