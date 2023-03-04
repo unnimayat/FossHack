@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylescp.css">
+    <!-- <script src="cp.js"></script> -->
+    <title>CREATE PROJECT</title>
+</head>
+<body>
+    <h1>
+        ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ENTER DETAILS OF THE PROJECT ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+    </h1>
+      <table id="t1" class="table" width="100%">
+        <thead>
+          <tr>
+            <th class="header-label">Notation</th>
+            <th class="header-label">Duration</th>
+            <th class="header-label">Task Name</th>
+            <th class="header-label">Predecessor Notation</th>
+          </tr>
+          <!-- <tr>
+            <td><input type="text" pattern="[A-Za-z]{3}"></td>
+            <td><input type="integer"></td>
+            <td><input type="string"></td>
+            <td><input type="text" pattern="[A-Za-z]{3}"></td>
+          </tr> -->
+        </thead>
+        <tbody>
+      </table>
+      <button class=b1 id="addRow">Add Row</button>
+      <script>
+        const addButton = document.getElementById('addRow');
+        const tableBody = document.querySelector('table');
+
+        addButton.addEventListener('click', () => {
+        console.log("CLicked");
+        const newRow = document.createElement('tr');
+        const notationCell = document.createElement('td');
+        const durationCell= document.createElement('td');
+        const tasknameCell= document.createElement('td');
+        const predecessorCell= document.createElement('td');
+
+        notationCell.setAttribute('id','newcell1');
+        durationCell.setAttribute('id','newcell2');
+        tasknameCell.setAttribute('id','newcell3');
+        predecessorCell.setAttribute('id','newcell4');
+
+        notationCell.type = 'text';
+        durationCell.type = 'integer';
+        tasknameCell.type = 'text';
+        predecessorCell.type = 'text';
+
+        notationCell.contentEditable = true;
+        durationCell.contentEditable = true;
+        tasknameCell.contentEditable = true;
+        predecessorCell.contentEditable = true;
+
+        newRow.appendChild(notationCell);
+        newRow.appendChild(durationCell);
+        newRow.appendChild(tasknameCell);
+        newRow.appendChild(predecessorCell);
+
+        tableBody.appendChild(newRow);
+        });
+      </script>
+</body>
+</html>
